@@ -21,9 +21,9 @@ body{
 
 
 ul { 
-   list-style: none; 
+   list-style: none;
 	padding:0px;
-	margin: 0px;
+	margin: 0px; 
 }
 
 img{
@@ -64,6 +64,7 @@ p{
 .navigation-list{
 	display: flex;
 	gap: 50px;
+	align-items: center;
 }
 
 .header-logo{
@@ -116,35 +117,32 @@ p{
 	gap: 50px;
 }
 
-.header-mail{
+.header-contact{
+	display: flex;
+	gap: 30px;
+}
+
+.header-mail-tel{
 	font-weight: 500;
 	line-height: 1.3;
 	color: var(--color-secondary);
 	text-decoration: none;
 	padding-top: 32px;
 	padding-bottom: 32px;
+	display:flex;
+   align-items:center;
+	gap: 10px;
 }
 
-.header-mail:hover,
-.header-mail:focus{
+.header-mail-tel:hover,
+.header-mail-tel:focus{
 	color: var(--color-brand);
 }
 
-
-.header-tel{
-	font-weight: 500;
-	line-height: 1.3;
-	color: var(--color-secondary);
-	text-decoration: none;
-	padding-top: 32px;
-	padding-bottom: 32px;
+.header-mail-tel:hover > .header-icon,
+.header-mail-tel:focus > .header-icon{
+	fill: var(--color-brand);
 }
-
-.header-tel:hover,
-.header-tel:focus{
-	color: var(--color-brand);
-}
-
 
 
 /*-----------------------------------*/
@@ -157,8 +155,13 @@ p{
 /*-----------------------------------*/
 .hero-section{
 	background-color: var(--color-background-brand);
+	background-image: linear-gradient( rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4) ), url(/images/back-img.jpg);
 	padding-top: 200px;
 	padding-bottom: 200px;
+	background-position: center;
+	max-width: 1600px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 
@@ -198,7 +201,6 @@ p{
 	background-color: #188CE8;
 }
 
-
 /*-----------------------------------*/
 /* ----------НАШІ ПЕРЕВАГИ---------- */
 /*-----------------------------------*/
@@ -213,14 +215,13 @@ p{
 	gap: 30px;
 }
 
-.list-text{
-	width: 270px;
-}
+
 
 .post-title {
 	font-weight: 700;
 	line-height: 1.17;
 	padding-bottom: 10px;
+	padding-top: 30px;
 	font-size: 14px;
 }
 
@@ -230,6 +231,15 @@ p{
 	color: var(--color-secondary);
 }
 
+.icon-up{
+	margin: 25px 100px;
+}
+.div-icon{
+	width: 270px;
+	height: 120px;
+	background: #F5F4FA;
+   border-radius: 4px;
+}
 
 /*-----------------------------------*/
 /* --------Чим ми займаємося-------- */
@@ -275,6 +285,7 @@ p{
    border-radius: 0px 0px 4px 4px;
 	text-align: center;
 	width: 270px;
+	margin: 0 auto;
 }
 
 .name{
@@ -289,6 +300,7 @@ p{
 	font-size: 16px;
 	line-height: 1.2;
 	color: var(--color-secondary);
+	padding-bottom: 16px;
 }
 
 .team-text{
@@ -296,6 +308,80 @@ p{
 	padding-bottom: 30px;
 }
 
+
+
+.list-team-icons{
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+}
+
+.icon{
+	fill: #AFB1B8;
+}
+
+.link-icon{
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	background-color: var(--color-white);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.link-icon:hover,
+.link-icon:focus{
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	background-color: var(--color-action);
+	display: flex;
+}
+
+
+.link-icon:hover > .icon,
+.link-icon:focus > .icon{
+	fill: var(--color-white);
+}
+
+
+
+/*-----------------------------------*/
+/* -------------CLIENT---------------- */
+/*-----------------------------------*/
+.client{
+	padding-bottom: 94px;
+	padding-top: 94px;
+}
+
+.client-list{
+	display: flex;
+	gap: 30px;
+	justify-content: center;
+}
+
+.client-company{
+	width: 170px;
+	height: 92px;
+	border: 1px solid #AFB1B8;
+   border-radius: 4px;
+}
+
+.client-company:hover,
+.client-company:focus{
+	border-color: var(--color-action);
+}
+
+.icon-company{
+	fill: rgba(175, 177, 184, 1);
+	margin: 16px 32px;
+}
+
+.link-client:hover > .icon-company,
+.link-client:focus > .icon-company{
+	fill: var(--color-action);
+}
 
 /*-----------------------------------*/
 /*------------PORTFOLIO--------------*/
@@ -351,6 +437,10 @@ p{
 	width: 370px;
 }
 
+.portfolio:hover{
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .title-projeck{
 	border: 1px solid #EEEEEE;
 	border-top: none;
@@ -380,6 +470,10 @@ p{
 	background-color: var(--color-background-brand);
 }
 
+.footer-wrapper{
+	display: flex;
+	gap: 70px;
+}
 
 
 .footer-logo{
@@ -393,6 +487,17 @@ p{
 
 	font-family: 'Raleway', sans-serif;
 	text-decoration: none;
+	font-style: normal;
+}
+
+.text-footer{
+	font-weight: 700;
+   font-size: 14px;
+   line-height: 16px;
+   letter-spacing: 0.03em;
+   text-transform: uppercase;
+   color: var(--color-white);
+	padding-bottom: 20px;
 	
 }
 
@@ -425,6 +530,38 @@ p{
 	color: var(--color-brand);
 }
 
+
+.list-team-icons-footer{
+	display: flex;
+	gap: 10px;
+}
+
+.icon-footer{
+	fill: var(--color-white);
+}
+
+.link-icon-footer{
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	background-color: rgba(255, 255, 255, 0.1);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.link-icon-footer:hover,
+.link-icon-footer:focus{
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	background-color: var(--color-action);
+	display: flex;
+}
+
+.footer-conteiner{
+	padding-top: 72px;
+}
 
 /*-----------------------------------*/
 /* ------------HIDDEN--------------- */
