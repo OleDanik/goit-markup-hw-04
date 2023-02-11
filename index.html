@@ -48,7 +48,7 @@
 	<section class="hero-section">
 		<div class="conteiner hero-wrapper">
 		<h1 class="hero-title">Ефективні рішення для <br> вашого бізнесу</h1>
-		<button type="button" class="hero-button">Замовити послугу</button>
+		<button type="button" class="hero-button" data-modal-open>Замовити послугу</button>
 	</div>
 	</section>
 
@@ -85,7 +85,7 @@
 	   </li>
 	   <li class="list-text"> 
 		   	<div class="div-icon">
-					<svg class="icon-up" width="70" height="70">
+					   <svg class="icon-up" width="70" height="70">
 						<use href="./images/social-item/symbol-defs.svg#icon-astronaut"> </use>
 					</svg>
 				</div>
@@ -101,9 +101,12 @@
 	<h2 class="title-secondary">Чим ми займаємося</h2>
 	<ul class="img-conteiner">
 	   <li><img src="./images/workone.jpg" alt="Десктопні додатки" width="370" height="294"></li>
-   	<li><img src="./images/worktwo.jpg" alt="Мобільні додатки" width="370" height="294"></li>
-   	<li><img src="./images/workthree.jpg" alt="Дизайнерські рішення" width="370" height="294"></li>
-   </ul>
+   	<p class="text-image text-addition">ДЕСТРОПНІ ДОДАТКИ</p>
+		<li><img src="./images/worktwo.jpg" alt="Мобільні додатки" width="370" height="294"></li>
+   	<p class="text-image">МОБІЛЬНІ ДОДАТКИ</p>
+		<li><img src="./images/workthree.jpg" alt="Дизайнерські рішення" width="370" height="294"></li>
+      <p class="text-image text-decision">ДИЗАЙНЕРСЬКІ РІШЕННЯ</p>
+	</ul>
 	</div>
 </section>
 
@@ -118,7 +121,7 @@
 					<h3 class="name">Ігор Дем'яненко</h3> 
 				   <p class="profesion">Product Designer</p>
 					<ul class="list-team-icons">
-					<li class="lilili">
+					     <li class="lilili">
 						<a class="link-icon" href="https://www.instagram.com/">
 							<svg class="icon" width="20" height="20">
 								<use href="./images/social-item/symbol-defs.svg#icon-instagram"> </use>
@@ -381,5 +384,19 @@
 </div>
 	</footer>
 
+	<div class="backdrop is-hidden" data-modal>
+		<div class="modal">
+         <button class="modal-button" type="button" data-modal-close>
+            <svg class="" width="20" height="20">
+					<use href="./images/social-item/symbol-defs.svg#close"> </use>
+				</svg>
+			</button>
+		</div>
+	</div>
+
+	<script src="./js/modal.js" type="module"></script>
+
+
+	
 </body>
 </html>
